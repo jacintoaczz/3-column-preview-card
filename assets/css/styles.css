@@ -1,0 +1,143 @@
+/* 
+  Table of contents:
+    1. Global
+    2. Tipography
+    3. Layout
+      3.1 Attribution
+    4. Components
+      4.1 Card
+      4.2 Buttons
+*/
+
+/* ----------------
+  1. Global
+   ---------------- */
+:root {
+  /* 
+    Primary colors */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* 
+    Neutral colors */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+
+  /* 
+    Typography */
+  --font-lexend: "Lexend Deca", sans-serif;
+  --font-big-shoulders: "Big Shoulders Display", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-light-gray);
+  font-size: 15px;
+  font-family: var(--font-lexend);
+}
+
+/* ---------------- 4. Components ---------------- */
+/* ----------------
+  4.1 Card
+   ---------------- */
+.cards-container {
+  margin: 5rem 1.5rem;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.card:nth-child(1) {
+  background-color: var(--bright-orange);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.card:nth-child(1) .btn {
+  color: var(--bright-orange);
+}
+
+.card:nth-child(1) .btn:hover {
+  background-color: var(--bright-orange);
+  color: var(--very-light-gray);
+}
+
+.card:nth-child(2) {
+  background-color: var(--dark-cyan);
+}
+
+.card:nth-child(2) .btn {
+  color: var(--dark-cyan);
+}
+
+.card:nth-child(2) .btn:hover {
+  background-color: var(--dark-cyan);
+  color: var(--very-light-gray);
+}
+
+.card:nth-child(3) {
+  background-color: var(--very-dark-cyan);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.card:nth-child(3) .btn {
+  color: var(--very-dark-cyan);
+}
+
+.card:nth-child(3) .btn:hover {
+  background-color: var(--very-dark-cyan);
+  color: var(--very-light-gray);
+}
+
+.card {
+  color: var(--very-light-gray);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h1 {
+  text-transform: uppercase;
+  font-family: var(--font-big-shoulders);
+  font-size: 2.5rem;
+  margin: 2rem 0rem;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.card__icon {
+  height: 2.25rem;
+  width: 3.5rem;
+}
+
+/* ----------------
+  4.2. Buttons
+   ---------------- */
+.btn {
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: var(--font-lexend);
+  margin: 2rem 0rem 0rem 0rem;
+  padding: 0.75em;
+  width: 65%;
+
+  outline: none;
+  border: 2px solid var(--very-light-gray);
+  border-radius: 2rem;
+  background-color: var(--very-light-gray);
+
+  transition: all 0.5s ease-in-out;
+}
