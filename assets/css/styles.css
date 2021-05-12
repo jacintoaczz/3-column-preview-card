@@ -78,6 +78,14 @@ body {
   grid-template-rows: repeat(3, 1fr);
 }
 
+.card {
+  color: var(--very-light-gray);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .card:nth-child(1) {
   background-color: var(--bright-orange);
   border-top-left-radius: 0.5rem;
@@ -119,14 +127,6 @@ body {
 .card:nth-child(3) .btn:hover {
   background-color: var(--very-dark-cyan);
   color: var(--very-light-gray);
-}
-
-.card {
-  color: var(--very-light-gray);
-  padding: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .card h1 {
